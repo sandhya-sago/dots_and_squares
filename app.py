@@ -10,8 +10,9 @@ app = Flask(__name__)
 
 # create route that renders index.html template
 @app.route("/")
-@app.route("/scrape")
+@app.route("/game")
 def index():
+    render_template("index.html")
     dots_and_squares.main()
     return "Great Game"
     # return render_template("index.html", mars=mars_info[0])
